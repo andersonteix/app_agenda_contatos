@@ -1,6 +1,6 @@
 # app_agenda_contatos
 
-A new Flutter application.
+App Agenda de contatos criado com Framework Flutter.
 
 ## Getting Started
 
