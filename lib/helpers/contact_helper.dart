@@ -43,12 +43,8 @@ class ContactHelper {
 
     return  await openDatabase(path, version: 1, onCreate: (Database db, int newerVersion) async { // onCreate utiliza uma função
               //cria o banco senao estiver criado
-              await db.execute("CREATE TABLE $contactTable( $idColumn INTEGER PRIMARY KEY, "
-                                            "$nameColumn TEXT, "
-                                            "$emailColumn TEXT, "
-                                            "$phoneColumn TEXT, "
-                                            "$imgColumn TEXT "
-                                          ")"
+              await db.execute("CREATE TABLE $contactTable( $idColumn INTEGER PRIMARY KEY, $nameColumn TEXT, $emailColumn TEXT, "
+                                            "$phoneColumn TEXT, $imgColumn TEXT )"
               );
     });
   }
