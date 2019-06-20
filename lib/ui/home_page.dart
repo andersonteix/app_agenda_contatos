@@ -10,7 +10,7 @@ class _HomePageState extends State<HomePage> {
   //  ContactHelper helper2 = ContactHelper(); // se este objeto fosse criado teria outro banco de dados com seus atributos, mas não é o caso dessa aplicação por ser contruida um singleton, unica instancia na aplicação
   ContactHelper helper = ContactHelper();
 
-  /*
+ /*
   //foi dado um override em initState para ter o local para colocar o codigo (como se fosse a main) SOMENTE PARA TESTE
   @override
   void initState() {
