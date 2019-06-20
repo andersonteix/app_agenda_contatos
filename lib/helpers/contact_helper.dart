@@ -39,7 +39,8 @@ class ContactHelper {
   // Como não retorna instantaneamente e utilizado o await e async para retornar e em muitos casos o Future<>
    Future<Database> initDb() async {
     final databasesPath = await getDatabasesPath(); // busca o local onde o banco esta armazenado
-    final path = join(databasesPath, "contacts.db"); // busca o arquivo que esta armazenado no banco de dados
+//    final path = join(databasesPath, "contacts.db"); // busca o arquivo que esta armazenado no banco de dados
+    final path = join(databasesPath, "contactsnew.db"); // renomeiar quando for fazer teste no banco para nao dar conflito em testes
 
     return  await openDatabase(path, version: 1, onCreate: (Database db, int newerVersion) async { // onCreate utiliza uma função
               //cria o banco senao estiver criado
@@ -125,6 +126,9 @@ class Contact {
   String email;
   String phone;
   String img;
+
+  //Construtor vazio
+  Contact();
 
   Contact.fromMap(Map map){
     id    = map[idColumn];
